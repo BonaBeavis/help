@@ -2,11 +2,12 @@
 
 ## Quick Start
 
-1. Open `help` folder.
-2. Right click and select `Open in Terminal`.
-3. ```bash
-   ./help.py
-   ```
+1. Go to `Settings` -> `Wi-Fi`
+2. Press three dots in the upper right corner and select `Turn On Wi-Fi Hotspot...`
+3. Open Firefox and check with bookmarks `Outlet A` and `Outlet B`, if they have already connected to the hotspot. If not WAIT.
+4. Open `help` folder on the desktop.
+5. Right click inside folder and select `Open in Terminal`.
+6. Type: `./help.py` and press enter.
 
 ## Troubleshooting
 
