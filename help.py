@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from lib.actions import init, on, off, play, wait, waitForFace, volume
 
