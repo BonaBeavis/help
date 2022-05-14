@@ -1,10 +1,18 @@
 - Laptop password: helpyourself
 
-# Troubleshooting
+## Quick Start
+
+1. Open `help` folder.
+2. Right click and select `Open in Terminal`.
+3. ```bash
+   ./help.py
+   ```
+
+## Troubleshooting
 
 Do this if the outlets do not connect to the laptop's hotspot:
 
-## Create Hotspot on Laptop
+### Create Hotspot on Laptop
 
 1. Go to `Settings` -> `Wi-Fi`
 2. Press three dots in the upper right corner and select `Turn On Wi-Fi Hotspot...`

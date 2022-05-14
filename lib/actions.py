@@ -1,6 +1,6 @@
-import pygame
 import cv2
 import face_recognition
+from pygame import mixer, mixer_music as music
 
 import os
 import time
@@ -9,8 +9,14 @@ from urllib.error import URLError, HTTPError
 from urllib.request import urlopen
 
 
+def init():
+    mixer.init()
+
+
 def log(message):
+    print('')
     print('----')
+    print('')
     print(message)
 
 
@@ -41,13 +47,18 @@ def play(file_name):
     script_path = Path(os.path.join(os.path.dirname(__file__)))
     absolute_file_path = Path.joinpath(script_path.parent, file_name)
     log('Play: ' + str(absolute_file_path))
-    pygame.mixer.music.load(absolute_file_path)
-    pygame.mixer.music.play()
+    music.load(absolute_file_path)
+    music.play()
 
 
 def stop():
     log('Stop music')
-    pygame.mixer.music.stop()
+    music.stop()
+
+
+def volume(volume):
+    log('Set volume to ' + str(volume))
+    music.set_volume(volume)
 
 
 def wait(seconds):
@@ -73,7 +84,3 @@ def switch_outlet(url):
     except URLError as e:
         print('Could reach the outlet!')
         print('Reason: ', e.reason)
-
-
-def init():
-    pygame.mixer.init()

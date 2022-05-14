@@ -1,4 +1,6 @@
-from lib.actions import init, on, off, play, wait, waitForFace
+#!/usr/bin/env python
+
+from lib.actions import init, on, off, play, wait, waitForFace, volume
 
 init()
 # Those are the outlet's URIs
@@ -8,14 +10,14 @@ B = 'http://delock-2592.local/'
 WEBCAM = -1
 
 # This will repeat the intended line forever.
+# There must be 4 spaces before each command.
 while True:
-    # There must be 4 spaces before each command.
-    # Filenames must be in single quotes.
-    play('A.mp3')
+    play('A.mp3')  # Filenames must be in single quotes.
     on(A)
     waitForFace(WEBCAM)
     off(A)
     on(B)
+    volume(1.0)  # Any number between 0.0 and 1.0.
     play('B.wav')
-    wait(3)
+    wait(10)
     off(B)
