@@ -4,8 +4,9 @@ from lib.actions import init, on, off, play, wait, waitForFace, volume
 
 init()
 # Those are the outlet's URIs
-A = 'http://delock-0077.local/'
-B = 'http://delock-2592.local/'
+# No trailing slashes!
+A = 'http://delock-0077.local'
+B = 'http://delock-2592.local'
 # The number of the webcam, should be something between 0 and 2
 WEBCAM = -1
 

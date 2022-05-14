@@ -66,19 +66,19 @@ def wait(seconds):
     time.sleep(seconds)
 
 
-def on(url):
-    log('Turn on ' + url)
-    switch_outlet(url + '/cm?cmnd=Power%20On')
-
-
 def off(url):
-    log('Turn off ' + url)
-    switch_outlet(url + '/cm?cmnd=Power%20Off')
+    switch_outlet(url, 'Off')
 
 
-def switch_outlet(url):
+def on(url):
+    switch_outlet(url, 'On')
+
+
+def switch_outlet(url, state):
+    url_state = url + '/cm?cmnd=Power%20' + state
+    log('Turn ' + state + ': ' + url_state)
     try:
-        urlopen(url).read()
+        urlopen(url_state).read()
     except HTTPError as e:
         print('Error code: ', e.code)
     except URLError as e:
