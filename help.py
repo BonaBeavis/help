@@ -35,12 +35,12 @@ WEBCAM = -1
 # This will repeat the intended line forever.
 # There must be 4 spaces before each command.
 while True:
-    play('A.mp3')  # Filenames must be in single quotes.
+    play('A.mp3')
     on(A)
     waitForFace(WEBCAM)
     off(A)
     on(B)
-    volume(1.0)  # Any number between 0.0 and 1.0.
+    volume(1.0)
     play('B.wav')
     wait(10)
     off(B)
