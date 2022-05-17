@@ -48,7 +48,7 @@ def play(file_name):
     absolute_file_path = Path.joinpath(script_path.parent, file_name)
     log('Play: ' + str(absolute_file_path))
     music.load(absolute_file_path)
-    music.play()
+    music.play(loops=-1)
 
 
 def stop():
